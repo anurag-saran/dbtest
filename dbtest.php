@@ -1,9 +1,9 @@
 <?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("DATABASE_USER");
-$dbname = getenv("DATABASE_NAME");
-$dbpwd = getenv("DATABASE_PASSWORD");
+$dbuser = getenv("MYSQL_USER");
+$dbname = getenv("MYSQL_DATABASE");
+$dbpwd = getenv("MYSQL_PASSWORD");
  
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
